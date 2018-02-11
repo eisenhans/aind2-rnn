@@ -5,7 +5,7 @@ import my_answers
 class MyAnswersTest(unittest.TestCase):
         
     def setUp(self):
-    	pass
+        pass
 
     def test_window_transform_series(self):
         window_size = 2
@@ -39,9 +39,9 @@ class MyAnswersTest(unittest.TestCase):
         self.assertTrue(np.array_equal(y, my_y))
 
     def test_cleaned_text(self):
-        text = "Shall%& I compare| th9ee to a ´summer's da°y?"
+        text = "Shäall%& I compare| th9ee to a ´summer's da°y?"
 
-        self.assertEquals("Shall   I compare  th ee to a  summer s da y?", my_answers.cleaned_text(text))
+        self.assertEquals("Shall I compare thee to a summers day?", my_answers.cleaned_text(text))
 
     def test_window_transform_text(self):
         text = "Shall I compare thee to a summers day?"
